@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TonePilot 客服支援、相容性說明與常見問題。">
+  <title>客服支援｜TonePilot</title>
+  <link rel="icon" type="image/png" href="assets/app-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header"><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/app-icon.png" alt=""><span>TonePilot</span></a><nav class="nav-links" aria-label="主要導覽"><a href="index.html">產品介紹</a><a href="support.html" aria-current="page">客服支援</a><a href="privacy.html">隱私權</a></nav></div></header>
+  <main>
+    <section class="page-hero"><div class="wrap"><div class="eyebrow">SUPPORT</div><h1>客服支援</h1><p>先查看常見問題。若仍無法解決，請附上設備、網路環境與錯誤畫面聯絡開發者。</p></div></section>
+    <section class="legal"><div class="wrap"><article>
+      <h2>開始前檢查</h2>
+      <ol class="checklist">
+        <li>確認 iPhone 與 SoundTouch 設備連接可互通的同一個區域網路。</li>
+        <li>到 iPhone「設定 → 隱私權與安全性 → 本機網路」允許 TonePilot。</li>
+        <li>先使用「裝置 → 搜尋 SoundTouch 設備」；找不到時再手動輸入 IP 與連接埠 8090。</li>
+        <li>若使用多房間，先分別確認每一台設備都能獨立連線。</li>
+      </ol>
+
+      <h2>常見問題</h2>
+      <div class="faq">
+        <details><summary>為什麼自動搜尋不到設備？</summary><p>請確認本機網路權限、Wi‑Fi 與路由器用戶端隔離設定。部分網路會阻擋 Bonjour 或 SSDP，這時可在 Bose 原廠設定或路由器內查看設備 IP，再使用手動連線。</p></details>
+        <details><summary>顯示「The request timed out」怎麼辦？</summary><p>先確認設備 IP 是否改變，重新搜尋並選擇由 <code>/info</code> 驗證成功的設備。若只有多房間查詢失敗，主要遙控功能不應因此被判定為離線。</p></details>
+        <details><summary>為什麼目前播放只顯示 TV？</summary><p>SoundTouch 的 HDMI／TV 音源通常不會回傳 Netflix 片名或電視節目名稱。TonePilot 會顯示設備真正提供的音源及播放狀態，不會猜測觀看內容。</p></details>
+        <details><summary>調整滑桿後數值沒有一致？</summary><p>App 會把數值對齊設備支援的步進，再重新讀取實際狀態。請等待寫入完成；若設備回傳不同值，可重新整理並附上錯誤畫面回報。</p></details>
+        <details><summary>場景可以控制 Netflix App 嗎？</summary><p>不行。Netflix 場景只會調整 SoundTouch 的音效設定；請先在電視或播放裝置開啟 Netflix，再套用場景。</p></details>
+        <details><summary>安全音量能阻止遙控器或電視調高音量嗎？</summary><p>不能。安全上限只套用於 TonePilot 發出的音量指令，無法攔截實體遙控器、HDMI‑CEC 或其他 App 的操作。</p></details>
+        <details><summary>TonePilot 能讓 SoundTouch 支援 Dolby Atmos 嗎？</summary><p>不能。App 不修改韌體，也不會新增硬體不存在的解碼或高度聲道功能。</p></details>
+      </div>
+
+      <h2 id="compatibility">相容性與驗證狀態</h2>
+      <div class="table-wrap"><table><thead><tr><th>設備</th><th>目前狀態</th></tr></thead><tbody>
+        <tr><td>SoundTouch 300</td><td>低音、高音、中央聲道、後環繞及 Dialog 核心音效已由使用者實機驗證。</td></tr>
+        <tr><td>SoundTouch 10／20／30、Portable、Wave、SA‑4／SA‑5</td><td>通用探索與遙控架構可依能力回報啟用；尚未實機驗證完整功能。</td></tr>
+        <tr><td>CineMate／Lifestyle／其他家庭劇院產品</td><td>只在設備能通過 SoundTouch API 身分與能力驗證時顯示支援項目；尚未實機驗證。</td></tr>
+      </tbody></table></div>
+      <p class="note">功能以設備實際回傳為準。不支援或尚未確認安全範圍的寫入功能會隱藏、停用或保持唯讀。</p>
+
+      <div class="contact-card">
+        <h2>聯絡客服</h2>
+        <p>開發者：Mason Hung<br>Email：<a href="mailto:taijia1025@gmail.com?subject=TonePilot%20客服問題">taijia1025@gmail.com</a></p>
+        <p>來信請附上 iPhone 型號、iOS 版本、TonePilot 版本、SoundTouch 型號與韌體、連線方式及問題截圖。請先遮蔽公網 IP、Wi‑Fi 密碼或其他私人資料。</p>
+      </div>
+    </article></div></section>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-row"><span>© 2026 Mason Hung · TonePilot</span><nav><a href="index.html">產品介紹</a><a href="privacy.html">隱私權政策</a></nav></div></footer>
+</body>
+</html>
