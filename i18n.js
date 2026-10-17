@@ -1,4 +1,5 @@
 (() => {
+  const siteVersion = '20261017-2';
   const supported = ['zh-Hant', 'zh-Hans', 'ja', 'en', 'de', 'vi'];
   const nav = {
     'zh-Hant': ['產品介紹','客服支援','隱私權','GitHub 專案'],
@@ -168,13 +169,14 @@
   document.title = seo[lang][kind][0];
   const meta = document.querySelector('meta[name="description"]'); if (meta) meta.content = seo[lang][kind][1];
   const select = document.querySelector('[data-language]');
-  if (select) { select.value = lang; select.addEventListener('change', e => { localStorage.setItem('tonepilot-language', e.target.value); const u = new URL(location.href); u.searchParams.set('lang', e.target.value); location.href = u; }); }
+  if (select) { select.value = lang; select.addEventListener('change', e => { localStorage.setItem('tonepilot-language', e.target.value); const u = new URL(location.href); u.searchParams.set('lang', e.target.value); u.searchParams.set('v', siteVersion); location.href = u; }); }
   // Keep the selected language when navigating between pages, even when
   // browser storage is unavailable or has been cleared.
   document.querySelectorAll('a[href]').forEach(link => {
     const url = new URL(link.getAttribute('href'), location.href);
     if (url.origin === location.origin && /(?:^|\/)(?:index|support|privacy)\.html$/.test(url.pathname)) {
       url.searchParams.set('lang', lang);
+      url.searchParams.set('v', siteVersion);
       link.href = url.href;
     }
   });
