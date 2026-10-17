@@ -43,6 +43,15 @@
     '第三方設備與服務': { 'zh-Hans':'第三方设备与服务',ja:'第三者の機器とサービス',en:'Third-party devices and services',de:'Drittgeräte und -dienste',vi:'Thiết bị và dịch vụ bên thứ ba' },
     '政策變更': { 'zh-Hans':'政策变更',ja:'ポリシーの変更',en:'Policy changes',de:'Änderungen',vi:'Thay đổi chính sách' },
     '聯絡方式': { 'zh-Hans':'联系方式',ja:'連絡先',en:'Contact',de:'Kontakt',vi:'Liên hệ' }
+    ,'主要導覽': { 'zh-Hans':'主要导航',ja:'メインナビゲーション',en:'Main navigation',de:'Hauptnavigation',vi:'Điều hướng chính' }
+    ,'Email：': { 'zh-Hans':'电子邮件：',ja:'メール：',en:'Email: ',de:'E-Mail: ',vi:'Email: ' }
+    ,'TonePilot App 圖示': { 'zh-Hans':'TonePilot App 图标',ja:'TonePilotアプリアイコン',en:'TonePilot app icon',de:'TonePilot-App-Symbol',vi:'Biểu tượng ứng dụng TonePilot' }
+    ,'TonePilot 主要遙控器畫面': { 'zh-Hans':'TonePilot 主遥控器画面',ja:'TonePilotメインリモコン画面',en:'TonePilot main remote screen',de:'TonePilot-Hauptfernbedienung',vi:'Màn hình điều khiển chính TonePilot' }
+    ,'TonePilot 智慧音效場景': { 'zh-Hans':'TonePilot 智能音效场景',ja:'TonePilotスマートサウンドシーン',en:'TonePilot smart sound scenes',de:'TonePilot-Klangszenen',vi:'Cảnh âm thanh thông minh TonePilot' }
+    ,'TonePilot 對白清晰度助手': { 'zh-Hans':'TonePilot 对白清晰度助手',ja:'TonePilot台詞明瞭化アシスタント',en:'TonePilot dialog clarity assistant',de:'TonePilot-Dialogassistent',vi:'Trợ lý hội thoại TonePilot' }
+    ,'TonePilot 裝置搜尋畫面': { 'zh-Hans':'TonePilot 设备搜索画面',ja:'TonePilot機器検索画面',en:'TonePilot device discovery screen',de:'TonePilot-Gerätesuche',vi:'Màn hình tìm thiết bị TonePilot' }
+    ,'TonePilot 安全音量與設備資訊': { 'zh-Hans':'TonePilot 安全音量与设备信息',ja:'TonePilot安全音量と機器情報',en:'TonePilot safe volume and device information',de:'TonePilot-Lautstärkeschutz und Geräteinfos',vi:'Âm lượng an toàn và thông tin thiết bị TonePilot' }
+    ,'TonePilot 設備健康診斷': { 'zh-Hans':'TonePilot 设备健康诊断',ja:'TonePilot機器診断',en:'TonePilot device health diagnostics',de:'TonePilot-Gerätediagnose',vi:'Chẩn đoán thiết bị TonePilot' }
   };
   const pageCopy = {
     en: {
@@ -61,7 +70,67 @@
       '若要語音操作，可對 Siri 說：「用 TonePilot 切換靜音」或「用 TonePilot 設定音響音量」。':'For voice control, ask Siri to toggle mute with TonePilot or set the speaker volume with TonePilot.',
       '若要放在桌面，長按主畫面加入「捷徑」小工具，再選擇 TonePilot 捷徑。':'To add a Home Screen control, add the Shortcuts widget and select a TonePilot shortcut.',
       'iOS 18 或更新版本可編輯控制中心、加入「捷徑」控制項，再指定需要的 TonePilot 動作。':'On iOS 18 or later, edit Control Center, add the Shortcuts control, and assign the desired TonePilot action.',
-      '捷徑執行時，iPhone 與 SoundTouch 必須位於同一個可連線的區域網路。音量仍受 TonePilot 的一般及夜間安全上限保護；電源屬於切換指令，會在開機與待機之間切換。':'When a shortcut runs, the iPhone and SoundTouch must be on the same reachable local network. Volume remains subject to TonePilot’s normal and nighttime safety limits. Power is a toggle between on and standby.'
+      '捷徑執行時，iPhone 與 SoundTouch 必須位於同一個可連線的區域網路。音量仍受 TonePilot 的一般及夜間安全上限保護；電源屬於切換指令，會在開機與待機之間切換。':'When a shortcut runs, the iPhone and SoundTouch must be on the same reachable local network. Volume remains subject to TonePilot’s normal and nighttime safety limits. Power is a toggle between on and standby.',
+      '本機控制 · iPhone 原生 App':'Local control · Native iPhone app',
+      '目前為開發測試版本。SoundTouch 300 核心音效已實機驗證；其他型號依設備回報能力顯示，仍待實機驗證。':'Currently in development testing. Core SoundTouch 300 sound controls have been tested on real hardware; other models remain unverified and are shown according to reported capabilities.',
+      'SoundTouch 智慧遙控器':'Smart SoundTouch remote',
+      '所有功能會先讀取設備能力，不支援的控制不會假裝可用。':'Features are enabled only after reading device capabilities. Unsupported controls are never presented as working.',
+      '透過 Bonjour 與 SSDP 尋找設備，也保留手動 IP；設備位址改變後可重新探索。':'Find devices using Bonjour and SSDP, with manual IP as a fallback and rediscovery after an address change.',
+      '提供電源、音量、靜音、播放控制、可用音源切換與原廠 Preset 快捷鍵。':'Control power, volume, mute, playback, available sources, and factory presets.',
+      '在支援設備上調整低音、高音、中央聲道、後環繞及對話增強模式。':'Adjust bass, treble, center channel, surround, and dialog mode on supported devices.',
+      '電影、動作、人聲、深夜、音樂、遊戲等安全起始值，也能建立自己的場景。':'Start with safe scenes for movies, action, voices, night, music, and games, or create your own.',
+      '檢查 API、即時同步、重低音、後環繞與設備能力；未取得的狀態不臆測。':'Check the API, live sync, bass module, surround speakers, and device capabilities without guessing unavailable states.',
+      '使用 WebSocket 接收狀態變更，重新讀取實際音量、音源與音效設定。':'Receive changes over WebSocket and refresh the actual volume, source, and sound settings.',
+      '比較兩組音效、揭曉結果，並可恢復比較前設定，降低反覆調音的負擔。':'Compare two sound profiles, reveal the result, and restore the original settings afterward.',
+      '設定一般與夜間音量上限。限制只套用於 TonePilot 發出的音量指令。':'Set normal and nighttime volume limits. Limits apply only to commands sent by TonePilot.',
+      '提供 15、30、60、90 分鐘快捷選項，到時先確認設備狀態再送出待機指令。':'Choose 15, 30, 60, or 90 minutes. TonePilot checks device status before sending standby.',
+      '依照控制、場景、智慧助手與裝置四個工作情境整理，避免把所有功能塞進同一頁。':'Organized into Control, Scenes, Smart Assistant, and Devices instead of crowding everything onto one screen.',
+      '主要遙控器':'Main remote',
+      '目前音源、音量、播放控制、睡眠定時器及劇院狀態集中呈現。':'See the current source, volume, playback controls, sleep timer, and theater status together.',
+      'Netflix 與更多家庭劇院情境可一鍵套用，再依房間微調。':'Apply Netflix and other home-theater scenes in one tap, then fine-tune them for your room.',
+      '對白清晰度助手':'Dialog clarity assistant',
+      '依聆聽問題提出可復原建議，不宣稱取代專業聲學量測。':'Get reversible suggestions based on what you hear, without claiming professional acoustic measurement.',
+      '自動探索設備':'Automatic device discovery',
+      '搜尋、驗證並保存設備，搜尋不到時仍可手動連線。':'Discover, verify, and save devices, with manual connection when discovery is unavailable.',
+      '安全音量與設備資訊':'Safe volume and device information',
+      '一般／夜間上限、設備名稱、型號與韌體資訊清楚可查。':'Review normal and nighttime limits, device name, model, and firmware.',
+      'API、即時同步、重低音及後環繞狀態一頁檢查。':'Check API, live sync, bass module, and surround status on one screen.',
+      'TonePilot 直接與家中 SoundTouch 設備通訊。音效場景及偏好保存在 iPhone；App 不提供遠端雲端控制，也不經營音樂串流服務。':'TonePilot communicates directly with SoundTouch devices at home. Scenes and preferences stay on the iPhone; the app offers neither remote cloud control nor music streaming.',
+      '閱讀隱私權政策 →':'Read the Privacy Policy →',
+      'TonePilot 不修改 Bose 韌體、不解鎖不存在的 DSP，也不宣稱讓任何設備支援 Dolby Atmos。HDMI／TV 若沒有提供節目名稱，App 只會誠實顯示音源。':'TonePilot does not modify Bose firmware, unlock nonexistent DSP features, or claim Dolby Atmos support. If HDMI/TV provides no program title, the app reports only the source.',
+      '查看相容性說明 →':'View compatibility details →',
+      '確認 iPhone 與 SoundTouch 設備連接可互通的同一個區域網路。':'Confirm the iPhone and SoundTouch are on the same reachable local network.',
+      '到 iPhone「設定 → 隱私權與安全性 → 本機網路」允許 TonePilot。':'On iPhone, allow TonePilot under Settings → Privacy & Security → Local Network.',
+      '先使用「裝置 → 搜尋 SoundTouch 設備」；找不到時再手動輸入 IP 與連接埠 8090。':'First use Devices → Search for SoundTouch Devices. If none are found, enter the IP address and port 8090 manually.',
+      '若使用多房間，先分別確認每一台設備都能獨立連線。':'For multi-room use, first confirm that each device connects independently.',
+      '為什麼自動搜尋不到設備？':'Why can’t automatic discovery find my device?',
+      '請確認本機網路權限、Wi‑Fi 與路由器用戶端隔離設定。部分網路會阻擋 Bonjour 或 SSDP，這時可在 Bose 原廠設定或路由器內查看設備 IP，再使用手動連線。':'Check Local Network permission, Wi-Fi, and router client-isolation settings. Some networks block Bonjour or SSDP; find the device IP in Bose settings or your router and connect manually.',
+      '顯示「The request timed out」怎麼辦？':'What should I do when “The request timed out” appears?',
+      '為什麼目前播放只顯示 TV？':'Why does Now Playing show only TV?',
+      'SoundTouch 的 HDMI／TV 音源通常不會回傳 Netflix 片名或電視節目名稱。TonePilot 會顯示設備真正提供的音源及播放狀態，不會猜測觀看內容。':'SoundTouch HDMI/TV sources usually do not return Netflix titles or TV program names. TonePilot shows only the source and playback state actually supplied by the device.',
+      '調整滑桿後數值沒有一致？':'Why does a slider value change after adjustment?',
+      'App 會把數值對齊設備支援的步進，再重新讀取實際狀態。請等待寫入完成；若設備回傳不同值，可重新整理並附上錯誤畫面回報。':'The app aligns values to supported steps and then reads the actual state again. Wait for the write to finish; if the device returns a different value, refresh and report it with a screenshot.',
+      '場景可以控制 Netflix App 嗎？':'Can scenes control the Netflix app?',
+      '不行。Netflix 場景只會調整 SoundTouch 的音效設定；請先在電視或播放裝置開啟 Netflix，再套用場景。':'No. Netflix scenes adjust only SoundTouch sound settings. Start Netflix on the TV or player first, then apply a scene.',
+      '安全音量能阻止遙控器或電視調高音量嗎？':'Can Safe Volume block volume changes from the TV or remote?',
+      '不能。安全上限只套用於 TonePilot 發出的音量指令，無法攔截實體遙控器、HDMI‑CEC 或其他 App 的操作。':'No. Safe limits apply only to TonePilot commands and cannot intercept a physical remote, HDMI-CEC, or another app.',
+      'TonePilot 能讓 SoundTouch 支援 Dolby Atmos 嗎？':'Can TonePilot add Dolby Atmos to SoundTouch?',
+      '不能。App 不修改韌體，也不會新增硬體不存在的解碼或高度聲道功能。':'No. The app does not modify firmware or add decoding or height channels absent from the hardware.',
+      '設備':'Device','目前狀態':'Current status',
+      '低音、高音、中央聲道、後環繞及 Dialog 核心音效已由使用者實機驗證。':'Bass, treble, center channel, surround, and Dialog controls have been verified by the user on real hardware.',
+      '通用探索與遙控架構可依能力回報啟用；尚未實機驗證完整功能。':'The general discovery and remote-control framework can enable reported capabilities; full functionality has not yet been verified on real hardware.',
+      'CineMate／Lifestyle／其他家庭劇院產品':'CineMate / Lifestyle / other home-theater products',
+      '只在設備能通過 SoundTouch API 身分與能力驗證時顯示支援項目；尚未實機驗證。':'Supported items appear only after SoundTouch API identity and capability checks; not yet verified on real hardware.',
+      '功能以設備實際回傳為準。不支援或尚未確認安全範圍的寫入功能會隱藏、停用或保持唯讀。':'Features depend on actual device responses. Unsupported writes, or writes without a confirmed safe range, are hidden, disabled, or read-only.',
+      '開發者：Mason Hung':'Developer: Mason Hung',
+      '來信請附上 iPhone 型號、iOS 版本、TonePilot 版本、SoundTouch 型號與韌體、連線方式及問題截圖。請先遮蔽公網 IP、Wi‑Fi 密碼或其他私人資料。':'Include the iPhone model, iOS and TonePilot versions, SoundTouch model and firmware, connection method, and a screenshot. Hide public IP addresses, Wi-Fi passwords, and other private data.',
+      '只有在使用者主動選擇「掃描音效 QR Code」時，本 App 才會要求相機權限。相機畫面用於辨識 TonePilot 設定內容，不會上傳給開發者。使用者亦可自行匯出或分享設定 JSON／QR Code；分享目的地的處理由所選 App 或服務決定。':'The App requests camera access only when you choose Scan Sound QR Code. Camera images identify TonePilot settings and are not uploaded to the developer. You may export or share settings as JSON or QR codes; the chosen app or service handles the destination.',
+      '本 App 不要求建立使用者帳號。':'The App does not require a user account.','本 App 不使用廣告識別碼，也不進行跨 App 或網站追蹤。':'The App uses no advertising identifier and performs no cross-app or cross-site tracking.','本 App 不出售使用者資料。':'The App does not sell user data.','本 App 不會將 SoundTouch 控制資料傳送至開發者伺服器。':'The App does not send SoundTouch control data to a developer server.',
+      '若使用者主動寄送客服 Email，寄件地址、信件內容與附件會由使用者及收件人的郵件服務處理。問題回報前請遮蔽 Wi‑Fi 密碼、公網 IP 或其他不必要的私人資料。':'If you contact support by email, the sender address, message, and attachments are handled by the sender’s and recipient’s mail services. Hide Wi-Fi passwords, public IP addresses, and unnecessary private data before reporting an issue.',
+      'SoundTouch 設備、家用路由器、iOS、電視、串流裝置及使用者選擇的分享服務，可能依其各自條款處理資料。本政策只說明 TonePilot 本身的資料處理方式。':'SoundTouch devices, routers, iOS, TVs, streaming devices, and selected sharing services may process data under their own terms. This policy describes only TonePilot’s processing.',
+      '若 App 的功能或資料處理方式有重大變更，本頁會更新內容與生效日期。':'If the App’s features or data handling change materially, this page and its effective date will be updated.',
+      'TonePilot 為獨立開發產品，未獲 Bose Corporation 贊助、授權或背書。Bose、SoundTouch 及相關商標屬其各自權利人所有。':'TonePilot is independently developed and is not sponsored, authorized, or endorsed by Bose Corporation. Bose, SoundTouch, and related marks belong to their respective owners.',
+      'TonePilot 為獨立開發產品，未獲 Bose Corporation 或任何串流服務商贊助、授權或背書。Bose、SoundTouch 及相關商標屬其各自權利人所有。':'TonePilot is independently developed and is not sponsored, authorized, or endorsed by Bose Corporation or any streaming provider. Bose, SoundTouch, and related marks belong to their respective owners.'
     },
     'zh-Hans': {
       '讓 SoundTouch 的每一個聲音細節，都更好掌握。':'更好地掌控 SoundTouch 的每一个声音细节。','探索功能':'探索功能','取得客服支援':'获取客户支持','簡潔，但不犧牲控制深度':'简洁，但不牺牲控制深度','生效日期：2026 年 10 月 13 日':'生效日期：2026 年 10 月 13 日',
@@ -100,11 +169,31 @@
   const meta = document.querySelector('meta[name="description"]'); if (meta) meta.content = seo[lang][kind][1];
   const select = document.querySelector('[data-language]');
   if (select) { select.value = lang; select.addEventListener('change', e => { localStorage.setItem('tonepilot-language', e.target.value); const u = new URL(location.href); u.searchParams.set('lang', e.target.value); location.href = u; }); }
+  // Keep the selected language when navigating between pages, even when
+  // browser storage is unavailable or has been cleared.
+  document.querySelectorAll('a[href]').forEach(link => {
+    const url = new URL(link.getAttribute('href'), location.href);
+    if (url.origin === location.origin && /(?:^|\/)(?:index|support|privacy)\.html$/.test(url.pathname)) {
+      url.searchParams.set('lang', lang);
+      link.href = url.href;
+    }
+  });
   if (lang === 'zh-Hant') return;
-  const dictionary = {...Object.fromEntries(Object.entries(common).map(([k,v]) => [k, v[lang]]).filter(([,v]) => v)), ...(pageCopy[lang] || {})};
+  const fallbackEnglish = pageCopy.en || {};
+  const generated = window.TONEPILOT_TRANSLATIONS?.[lang] || {};
+  const dictionary = {...fallbackEnglish, ...generated, ...Object.fromEntries(Object.entries(common).map(([k,v]) => [k, v[lang] || v.en]).filter(([,v]) => v)), ...(pageCopy[lang] || {})};
   const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
   const nodes = []; while (walker.nextNode()) nodes.push(walker.currentNode);
   nodes.forEach(node => { const raw = node.nodeValue; const trimmed = raw.trim(); if (dictionary[trimmed]) node.nodeValue = raw.replace(trimmed, dictionary[trimmed]); });
+  document.querySelectorAll('[alt], [aria-label]').forEach(el => {
+    for (const attribute of ['alt', 'aria-label']) {
+      const value = el.getAttribute(attribute);
+      if (value && dictionary[value]) el.setAttribute(attribute, dictionary[value]);
+    }
+  });
   const labels = nav[lang]; document.querySelectorAll('.nav-links a').forEach((a,i) => { if(labels[i]) a.textContent = labels[i]; });
-  document.querySelectorAll('.site-footer nav a').forEach(a => { const i = a.href.includes('support') ? 1 : a.href.includes('privacy') ? 2 : a.href.includes('github') ? 3 : 0; if(labels[i]) a.textContent = labels[i]; });
+  document.querySelectorAll('.site-footer nav a').forEach(a => { const i = a.hostname === 'github.com' ? 3 : a.href.includes('support.html') ? 1 : a.href.includes('privacy.html') ? 2 : 0; if(labels[i]) a.textContent = labels[i]; });
+  const languageNames = { 'zh-Hant':'語言', 'zh-Hans':'语言', ja:'言語', en:'Language', de:'Sprache', vi:'Ngôn ngữ' };
+  document.querySelectorAll('.language-picker .sr-only').forEach(el => { el.textContent = languageNames[lang]; });
+  if (select) select.setAttribute('aria-label', languageNames[lang]);
 })();
